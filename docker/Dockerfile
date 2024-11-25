@@ -77,9 +77,3 @@ RUN apk add --no-cache --virtual .font-deps $FONT_DEPS && \
     mktexlsr && \
     kanji-config-updmap-sys noto && \
     apk del .font-deps 
-
-VOLUME ["/workdir"]
-
-WORKDIR /workdir
-
-ENTRYPOINT ["/bin/bash", "-c", "make"]

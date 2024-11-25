@@ -1,4 +1,3 @@
-version: '3.2'
 services:
   letter-compile:
     image: yyupw/letter-pdf:latest
@@ -9,3 +8,5 @@ services:
         - yyupw/letter-pdf:latest
     volumes:
       - .:/workdir
+    working_dir: /workdir
+    command: /bin/bash -c make
